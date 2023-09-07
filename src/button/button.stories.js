@@ -5,7 +5,7 @@
  * @Date: 2023-09-07 09:26:20
  * @FilePath: \vue2-storybook-module\src\Button\Button.stories.js
 */
-import MyButton from './index.js';
+import MyButton from './index';
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
 export default {

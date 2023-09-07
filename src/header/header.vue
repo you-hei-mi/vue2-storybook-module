@@ -1,3 +1,10 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: zou hua
+ * @Date: 2023-09-07 09:26:20
+ * @FilePath: \vue2-storybook-module\src\header\Header.vue
+-->
 <template>
   <header>
     <div class="storybook-header">
@@ -34,7 +41,6 @@
 </template>
 
 <script>
-import './style';
 import MyButton from '../button/button.vue';
 
 export default {

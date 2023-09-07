@@ -59,7 +59,6 @@
 </template>
 
 <script>
-import './style';
 import MyHeader from '../header/header.vue';
 
 export default {

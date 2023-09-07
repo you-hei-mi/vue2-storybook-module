@@ -3,11 +3,8 @@
 </template>
 
 <script>
-import './style';
-
 export default {
   name: 'my-button',
-
   props: {
     label: {
       type: String,

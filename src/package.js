@@ -5,19 +5,25 @@
  * @Date: 2023-09-06 16:43:53
  * @FilePath: \vue2-storybook-module\src\package.js
 */
-// 引入封装好的组件
-import MyButton from "./button/button.vue";
-import MyHeader from "./header/header.vue";
-import MyPage from "./page/page.vue";
-
-
-const coms = [MyButton,MyHeader,MyPage]; // 将来如果有其它组件,都可以写到这个数组里
+import * as components from './components';
 
 // 批量组件注册
-const install = function (Vue) {
-  coms.forEach((com) => {
-    Vue.component(com.name, com);
+const install = function (Vue, config) {
+  Object.keys(components).forEach((key) => {
+    if (components[key]) {
+      /plugin/i.test(key) ? Vue.use(components[key]) : Vue.use(components[key], config);
+    }
   });
 };
 
-export default install; // 这个方法以后再使用的时候可以被use调用
+/* istanbul ignore if */
+if (typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+}
+
+
+export default {
+    install,
+    version: typeof __VERSION__ === 'undefined' ? '' : __VERSION__, // eslint-disable-line
+};
+  
