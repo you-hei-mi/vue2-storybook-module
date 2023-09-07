@@ -1,10 +1,3 @@
-/*
- * @Description: 
- * @Version: 1.0
- * @Author: zou hua
- * @Date: 2023-09-06 16:43:53
- * @FilePath: \vue2-storybook-module\src\package.js
-*/
 import * as components from './components';
 import { __VERSION__ }from './config'
 

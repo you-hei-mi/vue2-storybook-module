@@ -1,4 +1,6 @@
 /** @type { import('@storybook/vue').Preview } */
+import DocumentationTemplate from './DocumentationTemplate.mdx';
+
 const preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -7,6 +9,9 @@ const preview = {
         color: /(background|color)$/i,
         date: /Date$/,
       },
+    },
+    docs: {
+        page: DocumentationTemplate,
     },
   },
 };

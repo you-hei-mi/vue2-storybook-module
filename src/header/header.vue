@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import MyButton from '../button/button.vue';
+import MyButton from '../button';
 
 export default {
   name: 'my-header',

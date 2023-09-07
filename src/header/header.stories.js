@@ -1,4 +1,4 @@
-import MyHeader from './header.vue';
+import MyHeader from './index';
 
 export default {
   title: 'Example/Header',

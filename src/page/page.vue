@@ -59,7 +59,9 @@
 </template>
 
 <script>
-import MyHeader from '../header/header.vue';
+
+import MyHeader from '../header';
+
 
 export default {
   name: 'my-page',

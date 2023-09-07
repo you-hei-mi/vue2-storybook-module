@@ -21,6 +21,7 @@
     "@storybook/addon-essentials": "^7.4.0",
     "@storybook/addon-interactions": "^7.4.0",
     "@storybook/addon-links": "^7.4.0",
+    "@storybook/addon-notes": "^4.1.18",
     "@storybook/blocks": "^7.4.0",
     "@storybook/preset-scss": "^1.0.3",
     "@storybook/testing-library": "^0.2.0",

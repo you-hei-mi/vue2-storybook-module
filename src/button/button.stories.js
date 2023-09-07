@@ -1,22 +1,11 @@
-/*
- * @Description: 
- * @Version: 1.0
- * @Author: zou hua
- * @Date: 2023-09-07 09:26:20
- * @FilePath: \vue2-storybook-module\src\Button\Button.stories.js
-*/
 import MyButton from './index';
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
 export default {
-  title: 'Example/Button',
-  component: MyButton,
+  title: '示例/Button 按钮',
   tags: ['autodocs'],
-  render: (args, { argTypes }) => ({
-    props: Object.keys(argTypes),
-    components: { MyButton },
-    template: '<my-button @onClick="onClick" v-bind="$props" />',
-  }),
+  
+  component: MyButton,
   argTypes: {
     backgroundColor: { control: 'color' },
     size: {
@@ -26,30 +15,35 @@ export default {
   },
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/vue/writing-stories/args
-export const Primary = {
-  args: {
+const Template = (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
+    components: { MyButton },
+    template: '<my-button @onClick="onClick" v-bind="$props" />',
+})
+
+
+// eslint-disable-next-line storybook/prefer-pascal-case
+export const 默认 = Template.bind({});
+默认.args = {
     primary: true,
     label: 'Button',
-  },
 };
 
-export const Secondary = {
-  args: {
+export const Secondary = Template.bind({});
+Secondary.args = {
     label: 'Button',
-  },
 };
 
-export const Large = {
-  args: {
+
+export const Large = Template.bind({});
+Large.args = {
     size: 'large',
     label: 'Button',
-  },
 };
 
-export const Small = {
-  args: {
+export const Small = Template.bind({});
+Small.args = {
     size: 'small',
     label: 'Button',
-  },
 };
+

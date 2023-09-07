@@ -9,7 +9,7 @@ import capitalize from "lodash/capitalize";
 import { prefix }from '../config'
 
 export default function compRename(comp = {}) {
-    let { options = {}, name } = comp;
+    let { options = {}, __docgenInfo = {}, name } = comp;
     const installConfig = { prefix };
 
     let newName = ''
@@ -28,6 +28,9 @@ export default function compRename(comp = {}) {
   
     if (options && options.name) {
         comp.options.name = componentName;
+    }
+    if (__docgenInfo && __docgenInfo.displayName) {
+        comp.__docgenInfo.displayName = componentName;
     }
     if (name) {
         comp.name = componentName;

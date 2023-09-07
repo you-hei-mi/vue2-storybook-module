@@ -12,7 +12,8 @@ const config = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/preset-scss"
+    "@storybook/preset-scss",
+    "@storybook/addon-notes/register"
   ],
   framework: {
     name: "@storybook/vue-webpack5",
