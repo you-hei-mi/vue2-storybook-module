@@ -1,12 +1,12 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">{{ label }}</button>
+  <button type="button" :class="classes" @click="onClick" :style="style">{{ labelName }}</button>
 </template>
 
 <script>
 export default {
   name: 'my-button',
   props: {
-    label: {
+    labelName: {
       type: String,
       required: true,
     },

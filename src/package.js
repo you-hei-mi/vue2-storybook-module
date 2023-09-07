@@ -6,6 +6,7 @@
  * @FilePath: \vue2-storybook-module\src\package.js
 */
 import * as components from './components';
+import { __VERSION__ }from './config'
 
 // 批量组件注册
 const install = function (Vue, config) {
@@ -21,9 +22,8 @@ if (typeof window !== 'undefined' && window.Vue) {
     install(window.Vue);
 }
 
-
 export default {
     install,
-    version: typeof __VERSION__ === 'undefined' ? '' : __VERSION__, // eslint-disable-line
+    version: typeof __VERSION__ === 'undefined' ? '' : __VERSION__,
 };
   

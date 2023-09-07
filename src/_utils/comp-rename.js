@@ -6,10 +6,11 @@
  * @FilePath: \vue2-storybook-module\src\_utils\comp-rename.js
  */
 import capitalize from "lodash/capitalize";
+import { prefix }from '../config'
 
 export default function compRename(comp = {}) {
     let { options = {}, name } = comp;
-    const installConfig = { prefix: "k" };
+    const installConfig = { prefix };
 
     let newName = ''
     if(!name){
@@ -32,4 +33,4 @@ export default function compRename(comp = {}) {
         comp.name = componentName;
     }
     return comp;
-  }
+}
