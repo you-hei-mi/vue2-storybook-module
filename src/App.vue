@@ -1,6 +1,12 @@
+<!--
+ * @Description: 
+ * @Version: 1.0
+ * @Author: zou hua
+ * @Date: 2023-09-07 09:26:20
+ * @FilePath: \vue2-storybook-module\src\App.vue
+-->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <my-button label="这是 my-storybook-ui 组件按钮"></my-button>
   </div>
 </template>

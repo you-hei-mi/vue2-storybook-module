@@ -1,7 +1,16 @@
+/*
+ * @Description: 
+ * @Version: 1.0
+ * @Author: zou hua
+ * @Date: 2023-09-06 16:43:53
+ * @FilePath: \vue2-storybook-module\src\package.js
+*/
 // 引入封装好的组件
-import MyButton from "./stories/Button.vue";
-import MyHeader from "./stories/Header.vue";
-import MyPage from "./stories/Page.vue";
+import MyButton from "./button/button.vue";
+import MyHeader from "./header/header.vue";
+import MyPage from "./page/page.vue";
+
+
 const coms = [MyButton,MyHeader,MyPage]; // 将来如果有其它组件,都可以写到这个数组里
 
 // 批量组件注册
